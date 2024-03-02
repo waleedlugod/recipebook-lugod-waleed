@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from ledger.models import Ingredient, Recipe, RecipeIngredient
+
+from ledger.models import Recipe, RecipeIngredient
 
 
 def recipe_list(request):
