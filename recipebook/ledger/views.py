@@ -11,6 +11,7 @@ def recipe_list(request):
 def recipe_detail(request, pk):
     recipe_name = Recipe.objects.get(pk=pk)
     recipe_detail = {
-        "ingredients": RecipeIngredient.objects.filter(recipe__name=recipe_name)
+        "ingredients": RecipeIngredient.objects.filter(recipe__name=recipe_name),
+        "recipe": Recipe.objects.get(name=recipe_name)
     }
     return render(request, "recipe_detail.html", recipe_detail)
