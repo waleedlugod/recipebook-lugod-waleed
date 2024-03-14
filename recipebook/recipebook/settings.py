@@ -57,6 +57,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'recipebook.urls'
 
 LOGOUT_REDIRECT_URL = "/accounts/login"
+LOGIN_REDIRECT_URL = "/accounts/login"
 
 TEMPLATES = [
     {
