@@ -4,7 +4,7 @@
     <title>Recipe Book</title>
   </head>
   <body>
-    <header style="display: flex; flex-direction: row; align-items: center; column-gap: 1rem;">
+    <header>
       <h1>Recipe Book</h1>
       {% if request.user.is_authenticated %}
       <form method="POST" action="{% url 'logout' %}">
@@ -15,6 +15,7 @@
       <a href="{% url 'login' %}">Login</a>
       {% endif %}
     </header>
+		<hr/>
     {% block content %}{% endblock %}
   </body>
 </html>
