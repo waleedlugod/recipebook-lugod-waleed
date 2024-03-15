@@ -5,8 +5,7 @@
   </head>
   <body>
     <header>
-      <h1>Recipe Book</h1>
-      {% if request.user.is_authenticated %}
+      {% include "project_title.html" %} {% if request.user.is_authenticated %}
       <form method="POST" action="{% url 'logout' %}">
         {% csrf_token %} {{ form.as_p }}
         <button type="submit">Logout</button>
@@ -15,7 +14,7 @@
       <a href="{% url 'login' %}">Login</a>
       {% endif %}
     </header>
-		<hr/>
+    <hr />
     {% block content %}{% endblock %}
   </body>
 </html>
