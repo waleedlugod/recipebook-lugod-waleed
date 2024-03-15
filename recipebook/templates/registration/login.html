@@ -1,8 +1,10 @@
 <html>
   <body>
-		<form method="POST">
+    <h2>Login</h2>
+    <form method="POST">
       {% csrf_token %} {{ form.as_p }}
       <button type="submit">Login</button>
+      <a href="{% url 'password_reset' %}">Reset Password</a>
     </form>
   </body>
 </html>
